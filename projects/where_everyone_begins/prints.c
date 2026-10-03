@@ -12,8 +12,6 @@ int main(){
 	printf("Value1: %d \n", number);
 	printf("Value2: %.2f \n", another_number);
 	printf("Value3: %s \n", text);
-	free(number);
-	free(another_number);
 	free(text);
 	return 0;
 }
