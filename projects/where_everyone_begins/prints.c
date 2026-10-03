@@ -1,4 +1,4 @@
-<stdio.h>
+#include <stdio.h>
 int main(){
 	int number = 22;
 	float another_number = 2.83;
