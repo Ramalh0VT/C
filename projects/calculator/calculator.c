@@ -1,26 +1,38 @@
 #include <stdio.h>
+#include <stdbool.h> 
 void main(){
+	bool running = true;
+	while (running){
+		char operator;
+		double first, second;
+		printf("Select a operation: ( +, -, * /) Or Q to leave ");
+		scanf("%c", &operator);
+		printf("Enter two numbers to make the operation:");
+		scanf("%lf %lf",&first,&second);
+	
+		switch(operator){
+			case "+":
+				printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
+				break;
 
-float add(float a, float b){
-	sum = a + b;
-	return sum;
-}
+			case "-":
+				printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
+				break;
 
-float sub(float a, float b){
-	sum = a - b;
-	return sum;
-}
+			case "*":
+				printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
+				break;
 
-float div(float a, float b){
-	sum = a / b
-	return sum;
-}
-
-int mult(int a, int b){
-	sum = a * b
-	return sum;
-}
-
-void sum(float sum_value))
-
+			case "/":
+				printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
+				break;
+			case "Q":
+				running = false;
+				printf("Quitting... \n");
+				break;
+			default:
+				printf("Error: no matching operators");
+				break;
+	}
+	}
 }
