@@ -9,7 +9,9 @@ void main(){
 		scanf("%c", &operator);
 		switch(operator){
 			case 'Q':
-		}
+				printf("\n Quitting...");
+				running = false;
+				break;
 		printf("Enter two numbers to make the operation:");
 		scanf("%lf %lf",&first,&second);
 	
