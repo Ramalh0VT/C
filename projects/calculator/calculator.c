@@ -7,24 +7,31 @@ void main(){
 		double first, second;
 		printf("Select a operation: ( +, -, * /) Or Q to leave ");
 		scanf("%c", &operator);
+		if (operator == "Q"){
+			running = false;
+		}
 		printf("Enter two numbers to make the operation:");
 		scanf("%lf %lf",&first,&second);
 	
 		switch(operator){
 			case '+':
 				printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
+				printf("\n");
 				break;
 
 			case '-':
 				printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
+				printf("\n");
 				break;
 
 			case '*':
 				printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
+				printf("\n");
 				break;
 
 			case '/':
 				printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
+				printf("\n");
 				break;
 			case 'Q':
 				running = false;
