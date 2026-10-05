@@ -7,8 +7,8 @@ void main(){
 		double first, second;
 		printf("Select a operation: ( +, -, * /) Or Q to leave ");
 		scanf("%c", &operator);
-		if (operator == "Q"){
-			running = false;
+		switch(operator){
+			case 'Q':
 		}
 		printf("Enter two numbers to make the operation:");
 		scanf("%lf %lf",&first,&second);
