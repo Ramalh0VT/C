@@ -43,6 +43,19 @@ int main(){
 	else{
 		computer = 'r';
 	}
-	
+
+	srand(time(NULL));
+	n = rand() % 100;
+
+	if (n < 33){
+		you = 's';
+	}
+	else if (n > 33 && n < 66){
+		you = 'p';
+	}
+	else{
+		you = 'r';
+	}
+
 
 }
