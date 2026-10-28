@@ -13,7 +13,11 @@ int game (char you, char computer){
 	else if (you == 'p' && computer == 'r')
 		return 1;
 	else if (you == 'p' && computer == 's')
-
+		return 0;
+	else if (you == 'r' && computer == 's')
+		return 1;
+	else if (you == 'r' && computer == 'p')
+		return 0;
 
 
 	
