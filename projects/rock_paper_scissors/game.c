@@ -43,19 +43,10 @@ int main(){
 	else{
 		computer = 'r';
 	}
+	
+	printf("\n\n\n\n\t\t\tEnter r for ROCK, p for PAPER and s for SCISSORS")
+	scanf("%c", &you);
 
-	srand(time(NULL));
-	n = rand() % 100;
-
-	if (n < 33){
-		you = 's';
-	}
-	else if (n > 33 && n < 66){
-		you = 'p';
-	}
-	else{
-		you = 'r';
-	}
-
+	you_and_computer = 
 
 }
