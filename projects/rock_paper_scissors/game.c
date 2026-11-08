@@ -18,6 +18,18 @@ char set_computer_value() {
 	}
 }
 
+void you_won_message_printer(){
+	printf("\n\n\t\t\tYou won the game!");
+}
+
+void you_lost_message_printer(){
+	printf("\n\n\t\t\tYou lost the game!");
+}
+
+void draw_message_printer(){
+	printf("\n\n\t\t\tGame draw!");
+}
+
 void print_result_message(char you) {
 	char computer = set_computer_value();
 	if (you == computer){
@@ -41,28 +53,14 @@ void print_result_message(char you) {
 	else if (you == 'r' && computer == 'p'){
 		you_lost_message_printer();
 	}
-	printf("\n\n\n\n\t\t\t")
+	printf("\n\n\n\n\t\t\tYou chose %c and computer choice: %c\n\n", you, computer);
 }
-
-void you_won_message_printer(){
-	printf("\n\n\t\t\tYou won the game!")
-}
-
-void you_lost_message_printer(){
-	printf("\n\n\t\t\tYou lost the game!")
-}
-
-void draw_message_printer(){
-	printf("\n\n\t\t\tGame draw!")
-}
-
-
 
 int main(){
 	char you, result;
 
-	printf("\n\n\n\n\t\t\tEnter r for ROCK, p for PAPER and s for SCISSORS");
+	printf("\n\n\n\n\t\t\tEnter r for ROCK, p for PAPER and s for SCISSORS\n\n\n\n\t\t\t");
 	scanf("%c", &you);
 	
-	printf(print_result_message(you));
+	print_result_message(you);
 }
