@@ -18,30 +18,44 @@ char set_computer_value() {
 	}
 }
 
-char return_result_message(char you) {
+void print_result_message(char you) {
 	char computer = set_computer_value();
 	if (you == computer){
-		return -1;
+		draw_message_printer();
 	}
 	else if (you == 's' && computer == 'p'){
-		return '';
+		you_won_message_printer();
 	}
 	else if (you == 's' && computer == 'r'){
-		return 0;
+		you_lost_message_printer();
 	}
 	else if (you == 'p' && computer == 'r'){
-		return 1;
+		you_won_message_printer();
 	}
 	else if (you == 'p' && computer == 's'){
-		return 0;
+		you_lost_message_printer();
 	}
 	else if (you == 'r' && computer == 's'){
-		return 1;
+		you_won_message_printer();
 	}
 	else if (you == 'r' && computer == 'p'){
-		return 0;
+		you_lost_message_printer();
 	}
+	printf()
 }
+
+void you_won_message_printer(){
+	printf("\n\n\t\t\tYou won the game!")
+}
+
+void you_lost_message_printer(){
+	printf("\n\n\t\t\tYou lost the game!")
+}
+
+void draw_message_printer(){
+	printf("\n\n\t\t\tGame draw!")
+}
+
 
 int main(){
 	char you, result;
@@ -49,5 +63,5 @@ int main(){
 	printf("\n\n\n\n\t\t\tEnter r for ROCK, p for PAPER and s for SCISSORS");
 	scanf("%c", &you);
 	
-	printf(return_result_message(you));
+	printf(print_result_message(you));
 }
