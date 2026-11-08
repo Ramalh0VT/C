@@ -5,7 +5,7 @@
 
 char set_computer_value() {		
 	srand(time(NULL));
-	n = rand() % 100;
+	int n = rand() % 100;
 
 	if (n < 33){
 		return 's';
@@ -18,12 +18,13 @@ char set_computer_value() {
 	}
 }
 
-int game(char you, char computer) {
+char return_result_message(char you) {
+	char computer = set_computer_value();
 	if (you == computer){
 		return -1;
 	}
 	else if (you == 's' && computer == 'p'){
-		return 1;
+		return '';
 	}
 	else if (you == 's' && computer == 'r'){
 		return 0;
@@ -43,14 +44,10 @@ int game(char you, char computer) {
 }
 
 int main(){
-	char you, computer, result;
-	
-	computer = set_computer_value;
-	
-	printf("\n\n\n\n\t\t\tEnter r for ROCK, p for PAPER and s for SCISSORS")
+	char you, result;
+
+	printf("\n\n\n\n\t\t\tEnter r for ROCK, p for PAPER and s for SCISSORS");
 	scanf("%c", &you);
-
-	char you_and_computer[] = {you, computer};
-
-	result = game(you_and_computer);
+	
+	printf(return_result_message(you));
 }
