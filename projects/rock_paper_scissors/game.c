@@ -41,7 +41,7 @@ void print_result_message(char you) {
 	else if (you == 'r' && computer == 'p'){
 		you_lost_message_printer();
 	}
-	printf()
+	printf("\n\n\n\n\t\t\t")
 }
 
 void you_won_message_printer(){
@@ -55,6 +55,7 @@ void you_lost_message_printer(){
 void draw_message_printer(){
 	printf("\n\n\t\t\tGame draw!")
 }
+
 
 
 int main(){
